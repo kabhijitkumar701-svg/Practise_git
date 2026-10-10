@@ -1,6 +1,15 @@
-def main():
-    print("Hello from agenticai!")
+# talk to ai models that runing on external servers
+
+from dotenv import load_dotenv
+from openai import OpenAI
 
 
-if __name__ == "__main__":
-    main()
+load_dotenv()
+
+client=OpenAI()
+response=client.response.create(
+    model="gpt-4.1-mini",
+    input="what is the capital of bihar?"
+)
+
+print(response)
