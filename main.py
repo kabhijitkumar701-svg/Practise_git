@@ -9,7 +9,7 @@ load_dotenv()
 client=OpenAI()
 response=client.response.create(
     model="gpt-4.1-mini",
-    input="what is the capital of bihar?"
+    input="what is the capital of up?"
 )
 
 print(response)
